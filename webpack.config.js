@@ -7,16 +7,7 @@ module.exports = {
     devtool: 'source-map',　　// 调试时定位到编译前的代码位置，推荐安装react插件
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, '/build'),
-        publicPath: "/build/",
-        chunkFilename: '[name].js'
-
-    },
-    devServer: {
-        contentBase: __dirname + "/build",
-        inline: true,
-        host: '0.0.0.0',
-        port: 8080,
+        path: path.resolve(__dirname, 'dist')
     },
     resolve: {
         modules: [path.resolve(__dirname, 'node_modules')],//优化webpack文件搜索范围
@@ -35,9 +26,6 @@ module.exports = {
                 presets: [
                     'es2015',
                     'stage-0',
-                    'stage-1',
-                    'stage-2',
-                    'stage-3',
                     'react'
                 ]
             }
